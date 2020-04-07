@@ -1,0 +1,100 @@
+{
+    "horoscope": [
+        {
+            "burc": "Boğa",
+            "gezegen": "Venüs",
+            "ugurluTas": "Zümrüt",
+            "olumlu": "Pratik, güvenilir. Uyumlu, tahammüllü, güçlü değer yargıları var. Kararlı. Sanata ve güzelliğe düşkün. Güçlü istekleri var. Sıcak kanlı. Para sahibi olur. Duygulara önem verir.",
+            "olumsuz": "Tembel. Kendine düşkün. Statik. Sıkıcı. Yeterince esnek değil. Orijinalite eksikliği, înat-çı. Alıngan.",
+            "tarih": "20 Nisan - 20 Mayıs"
+        },
+        {
+            "burc": "Koç",
+            "gezegen": "Mars",
+            "ugurluTas": "Elmas",
+            "olumlu": "Öncülük ve macera ruhu. Girişkenlik. Adam yönlendirme. Hedef belirleme özelliği. Yüksek Enerji. Engelleri aşabilme yetişi. Sınırlamalardan nefret. Liderlik. Dürüstlük. Hazır cevaplık. Canlılık.",
+            "olumsuz": "Egoizm. Kararları yıkmak. Kendini öne sürmek, ileri-ye çıkartmak. Alaycı, isyankar. Sabırsız. Saldırgan. Hiddetli. Ani çıkışlar",
+            "tarih": "21 Mart - 19 Nisan"
+        },
+        {
+            "burc": "İkizler",
+            "gezegen": "Merkür",
+            "ugurluTas": "Turmalin",
+            "olumlu": "Uyumlu, entelektüel, çabuk kavrayan, mantıklı, konuşkan, canlı, sempatik, yeniliklere açık. Aynı anda bir kaç işi birden yapabilen.",
+            "olumsuz": "Değişken, güvenilmez, iki yüzlü, kararsız, yüzeysel, dedikoducu, huzursuz, havai",
+            "tarih": "21 Mayıs - 21 Haziran"
+        },
+        {
+            "burc": "Yengeç",
+            "gezegen": "Ay",
+            "ugurluTas": "Amber",
+            "olumlu": "Nazik,Hassas,Sempatik,Merhametli Düş gücü yüksek. Analık ve babalık duygulan güçlü. Vatansever. Yuva sevgisi. Israrlı. Becerikli. İyi eş. Tutumlu.",
+            "olumsuz": "Aşırı duygusal. Züppe. Dağınık. Kuşkucu. Değişken. Kıskanç. Zayıf karakterli. Kendine acıma meyilli. Sabit olamamak. Değişken duygular.",
+            "tarih": "22 Haziran - 22 Temmuz"
+        },
+        {
+            "burc": "Aslan",
+            "gezegen": "Güneş",
+            "ugurluTas": "Safir",
+            "olumlu": " Yüce gönüllülük. Cömertlik. Yaratıcılık. Babalık. Fedakarlık. Üstünlük. Yaratıcılık. Neşe. İyi organizasyon. Açık zihin.",
+            "olumsuz": "Otorite. Diktatörlük. Zorbalık. Tantana. Züppelik. Tolerans göstermemek. Sabit fikirlilik. Kuvvet deliliği. Kendini beğenmişlik.",
+            "tarih": "23 Temmuz - 22 Ağustos"
+        },
+        {
+            "burc": "Başak",
+            "gezegen": "Merkür",
+            "ugurluTas": "Koyu safir",
+            "olumlu": "Analizcilik. Dostluk. Dikkat. Ustalık. Cana yakınlık. Temizlik. Titizlik. Alçak gönüllülük. Giyim merakı. Hesap kafası. Esprili konuşma. İyilik isteği.",
+            "olumsuz": "Hastalık hastası. İşgüzar. Aceleci. Aşırı tenkitçi. Aşırı titiz. Kolay beğenmez. Geleneklere sıkı bağlı. Aşırı meraklı",
+            "tarih": "23 Ağustos - 22 Eylül"
+        },
+        {
+            "burc": "Terazi",
+            "gezegen": "Venüs",
+            "ugurluTas": "Zebercet",
+            "olumlu": "Güzellik, güzel sanatlara yetenekli. Sevimlilik. Uyumluluk. Zarafet. Romantik. Diplomatik. İncelik. Çekicilik. İdealist. Tarafsız. İyi niyetli. İyi ortak. İyi siyasetçi. Kreatif ve alımlı. Akıllı.",
+            "olumsuz": "Kararsız. Alıngan. Hafiflik. Değişkenlik. Flörtçü. Dengesizlik. Aldatabilir oluşu. Tembellik. Çabuk fikir değiştirme. Tesir altında kalmak.",
+            "tarih": "23 Eylül - 22 Ekim"
+        },
+        {
+            "burc": "Akrep",
+            "gezegen": "Mars-Pluto",
+            "ugurluTas": "Yılantaşı",
+            "olumlu": "Sırdaş. Duygularım belli etmez. Gerçek dost. Cazibeli. Güçlü. Seks sembolü. Çalışkan. Kararlı. Unutmaz. Güçlü sezgiler. Güçlü duygular. Yüksek imajinasyon. Anlayışlı. Dikkatli. Yüksek analiz gücüne sahip. Sevgi. Pişmanlık.",
+            "olumsuz": "Kindar. Kuşkucu. Kıskanç. alıngan. Dik kafalı. Suskun. Akrep gibi, zehirleyici. Alaycı. Ben merkezci. İhtiraslı",
+            "tarih": "23 Ekim - 21 Kasım"
+        },
+        {
+            "burc": "Yay",
+            "gezegen": "Jüpiter",
+            "ugurluTas": "Lal",
+            "olumlu": "Keyifli. Neşeli, îş bilir. Açık zihinli. Adapte olur. İyi yargılar, Felsefik. Özgürlüğüne düşkün. Dışa dönük. Dindar. Eğitimli. Olgun. İyi niyetli. Sportmen. Yüksek hayal gücü. Şanslı. Neşeli.",
+            "olumsuz": "Aşırı iyimser. Gürültücü. Sorumsuz. Kaprisli. Ani ilgi. Çabuk bıkmak. Sabırsızlık",
+            "tarih": "22 Kasım - 21 Aralık"
+        },
+        {
+            "burc": "Oğlak",
+            "gezegen": "Satürn",
+            "ugurluTas": "Kehribar",
+            "olumlu": "Çalışkan. Güvenilir. Kararlı. İstekli. Sabırlı. Azimli. İhtiyatlı. Disiplinli. Plancı. Espri gücü. Düzenli. Sebatkar. Azla yetinir. Zengin olur. Dayanma gücü yüksek. Sorumlu. İyi eş, iyi anne baba. Mülkiyetçi.",
+            "olumsuz": "Eğilmez. Dik başlı. İhtiraslı. Kötümser. Kuşkucu. Kindar. Sert. Karamsar. Yalnızlık meraklısı",
+            "tarih": "22 Aralık - 19 Ocak"
+        },
+        {
+            "burc": "Kova",
+            "gezegen": "Uranüs",
+            "ugurluTas": "Cam",
+            "olumlu": "Hümanist. Bağımsız. Dost. Mucit. Orijinalist. Reformist. Sadık. Vefalı. İdealist. Entelektüel. Yeniliğe meraklı. Değişikliği sever. Geçmişe bağlı.",
+            "olumsuz": "Umulmadık gariplikler. isyankarlık. Muhalif. Sabit fikirli. Gelenekleri zorlayıcı. Çılgın, tartışmaya meraklı. Dikkati çekmek ister. Çılgın. Kendini beğenmiş. Olmayacak hayaller",
+            "tarih": "20 Ocak - 18 Şubat"
+        },
+        {
+            "burc": "Balık",
+            "gezegen": "Neptün",
+            "ugurluTas": "Amber",
+            "olumlu": "Alçak gönüllü. Şefkatli. Sempatik. Hassas. Adapte olabilir. Etkili. Anlayışlı. Nazik. Sezgili. Renkli hayaller. Derin duygular. Sevgiye düşkünlük. Merhametli. Güzel sanatlarda başarılı. İyi niyetli. Yardımsever.",
+            "olumsuz": "Belirsizlik. İhmalcilik. Gizlilik. Kolay dağılmak. Zayıf arzular. Kararsızlık. Mücadeleci değil. Karamsar. Çekingen. Alıngan",
+            "tarih": "19 Şubat - 20 Mart"
+        }
+    ]
+}

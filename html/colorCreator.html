@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Color Creator</title>
+    <style>
+        #result {
+            width: 150px;
+            height: 150px;
+        }
+
+        .box {
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <!-- First Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="../index.html">Hakan Ünal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse my-2 my-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+
+                    <!-- Applications Dropdown Start -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownApplications" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Applications
+                        </a>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownApplications">
+                            <a class="dropdown-item text-light bg-dark" href="./colorCreator.html">Color
+                                Creator</a>
+                            <a class="dropdown-item text-light bg-dark" href="./covid-19.html">Covid-19</a>
+                            <a class="dropdown-item text-light bg-dark" href="./exchange.html">Online Currency
+                                Converter</a>
+                            <a class="dropdown-item text-light bg-dark" href="./horoscope.html">Horoscope</a>
+                            <a class="dropdown-item text-light bg-dark" href="./weather.html">Weather</a>
+                        </div>
+                    </li>
+                    <!-- Applications Dropdown End -->
+                    <!-- Games Dropdown Start -->
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownGames" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Games
+                        </a>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownGames">
+                            <a class="dropdown-item text-light bg-dark" href="#">Covid-19</a>
+                            <a class="dropdown-item text-light bg-dark" href="#">Exchange rate</a>
+                            <a class="dropdown-item text-light bg-dark" href="#">Something else here</a>
+                            <a class="dropdown-item text-light bg-dark" href="#">Something else here</a>
+                            <a class="dropdown-item text-light bg-dark" href="#">Something else here</a>
+                            <a class="dropdown-item text-light bg-dark" href="#">Something else here</a>
+                            <a class="dropdown-item text-light bg-dark" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <!-- Games Dropdown End -->
+                </ul>
+            </div>
+        </nav>
+        <!-- First Navbar End -->
+
+
+        <!-- Second Navbar Start -->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <span id="dateNavbar" class="ml-auto badge badge-pill badge-light"></span>
+        </nav>
+        <!-- Second Navbar End -->
+
+
+    </div>
+
+    <div class="container my-5">
+
+        <div class="row">
+
+            <div class="col-3 list-group">
+
+                <a class="list-group-item btn btn-outline-dark btn-block px-0 btn-sm" href="#">Front-end</a>
+                <a class="list-group-item btn btn-outline-dark btn-block px-0 btn-sm" href="#">Back-end</a>
+                <a class="list-group-item btn btn-outline-dark btn-block px-0 btn-sm" href="#">Full Stack</a>
+                <a class="list-group-item btn btn-outline-dark btn-block px-0 btn-sm" href="#">Database</a>
+                <a class="list-group-item btn btn-outline-dark btn-block px-0 btn-sm" href="#">Algorithms</a>
+            </div>
+
+
+            <div class="col-8">
+                <table class="table">
+                    <caption id="colorName"></caption>
+                    <caption id="colorNameHex"></caption>
+                    <thead class="bg-dark text-light">
+
+                        <tr>
+                            <th>Range</th>
+                            <th>Name</th>
+                            <th>Color</th>
+                            <th>***</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <p><input id="red" class="custom-range w-100 d-inline" type="range" min="0" max="255">
+                                </p>
+                            </td>
+                            <td class="text-danger">R</td>
+                            <td>
+                                <div class="box w-25" id="redBox"></div>
+                            </td>
+                            <td rowspan="4">
+                                <div class="w-25" id="result"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><input id="blue" class="custom-range w-100 d-inline" type="range" min="0" max="255">
+                                </p>
+                            </td>
+                            <td class="text-info">B</td>
+                            <td>
+                                <div class="box w-25" id="blueBox"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><input id="green" class="custom-range w-100 d-inline" type="range" min="0" max="255">
+                                </p>
+                            </td>
+                            <td class="text-success">G</td>
+                            <td>
+                                <div class="box w-25" id="greenBox"></div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+
+        <script language="javaScript" type="text/javaScript" src="../script/date.js"></script>
+        <script type="text/JavaScript" src="../script/colorCreator.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
