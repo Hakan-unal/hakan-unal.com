@@ -31,7 +31,7 @@ const display = (obj) => {
                 <li class="list-group-item"><b>Total Deaths:</b>${element.deaths.total}</li>
                 `;
                 body.appendChild(ul);
-                footer.innerText = `LAST UPDATED: ${element.day}`
+                footer.innerText = `Last Updated: ${element.day}`
             }
         });
     });

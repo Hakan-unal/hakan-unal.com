@@ -29,7 +29,7 @@ const calculate = (object) => {
 // horoscope.json pathinde yer alan veri json veriye parse ediliyor ve kullnılabilir obje haline geldiğinde
 // calculate fonksiyonunun içerisine gönderiliyor
 const getJson = () => {
-    fetch("../json/horoscope.json").then(response => response.json()).then(data => {
+    fetch("../../json/horoscope.json").then(response => response.json()).then(data => {
         calculate(data);
     }).catch(err => alert("hata"));
 }
