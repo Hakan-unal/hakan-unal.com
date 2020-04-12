@@ -6,7 +6,7 @@ const tryButton = document.querySelector("#tryButton");
 const price = document.querySelector("#price");
 
 // hem ticket hem lottery 10 haneli olacağğı için size değişkeni 10'a eşitlendi
-const size = 10;
+const size = 7;
 let ticketNumbers, lotteryNumbers;
 
 // Kutucukların içerisinde yer alacak sayılar aşağıdaki fonksiyonda yaratıldı ve
@@ -70,7 +70,7 @@ const getLotteryNumber = () => {
 // çağırıldığı yere count değişkeni return edilir
 const controlPrice = () => {
     let count = 0;
-    if (ticketNumbers.length == 10 && lotteryNumbers.length == 10) {
+    if (ticketNumbers.length == 7 && lotteryNumbers.length == 7) {
         for (let i = 0; i < size; i++) {
             if (ticketNumbers[i] == lotteryNumbers[i]) {
                 count += 25000;

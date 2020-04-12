@@ -4,9 +4,9 @@ const word = document.querySelector("#row");
 const letter = document.querySelector("#letter");
 const input = document.querySelector("#input");
 const button = document.querySelector("#button");
-const container = document.querySelector("#container");
+const result = document.querySelector("#result");
 
-const words = ["beşiktaş", "javascript", "bilgisayar"];
+const words = ["besiktas", "html", "frontend"];
 const size = words.length - 1;
 
 // Sayfa her yüklendiğinde aynı soru gelmemesi için aşağıdaki method sayesinde array
@@ -27,7 +27,7 @@ const getWord = (selected) => {
         </div>
          `
     }
-    
+
     // trial değişkeninin value'sine trials değişkeni tanımlandı kullanıcı kaç deneme
     // hakkı kaldığını görebilsin diye
     trial.value = trials;
@@ -92,8 +92,7 @@ const controller = () => {
     // kutucuklar dolmuşdemektir ve bu aşamada oyun bitmelidir. Oyun sonu için ekleme
     // yapacaksan buraya yapabilirsin
     if (size == count) {
-        container.innerHTML = "";
-        container.innerText = `!!  ${selectedWord.toUpperCase()}  !!`;
+        result.value = `!!  ${selectedWord.toUpperCase()}  !!`;
     }
 }
 
