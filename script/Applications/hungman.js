@@ -6,7 +6,7 @@ const input = document.querySelector("#input");
 const button = document.querySelector("#button");
 const result = document.querySelector("#result");
 
-const words = ["besiktas", "html", "frontend"];
+const words = ["jquery", "html", "css", "nodejs","web","hungman"];
 const size = words.length - 1;
 
 // Sayfa her yüklendiğinde aynı soru gelmemesi için aşağıdaki method sayesinde array
