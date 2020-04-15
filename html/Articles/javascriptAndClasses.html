@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Math, Date, String and Number Classes in JavaScript (With Samples)" />
+    <meta name="keywords"
+        content="HTML,CSS,JavaScript,Bootstrap,Node.js,Express.js.Hakan Ünal,Software,Node.js Article,Full Stack,Front End,Back End,Web,Developer,Computer Engineer Student,JavaScript and Classes,Constructor,Inheritance,samples,Math Class, Date Class, String Class,Number Class,In JavaScript">
+    <meta name="author" content="Hakan Ünal">
+
+    <!--Preview image-->
+    <link rel="image_src" href="../../img/preview.jpeg" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Font Awesome Script -->
+    <script src="https://kit.fontawesome.com/02fca21eb9.js" crossorigin="anonymous"></script>
+
+    <title>Hakan ÜNAL</title>
+
+
+
+    <style>
+        /* Set the border color */
+
+        .custom-toggler.navbar-toggler {
+            border-color: white;
+        }
+
+        /* Setting the stroke to green using rgb values (0, 128, 0) */
+
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+    </style>
+
+
+
+</head>
+
+<body class="bg-dark">
+
+    <!--Covering everything Container Start-->
+    <div class="container">
+
+
+        <!-- First Navbar Start -->
+        <nav class="navbar navbar-expand-lg">
+
+
+            <!-- Navbar Home Icon -->
+            <a class="navbar-brand text-light" href="../../index.html">
+
+                <svg class="bi bi-house-door" width="3em" height="3em" viewBox="0 0 15 15" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M7.646 1.146a.5.5 0 01.708 0l6 6a.5.5 0 01.146.354v7a.5.5 0 01-.5.5H9.5a.5.5 0 01-.5-.5v-4H7v4a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-7a.5.5 0 01.146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 01.5-.5h3a.5.5 0 01.5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"
+                        clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5z"
+                        clip-rule="evenodd" />
+                </svg>
+            </a>
+
+
+            <!-- Toogler  Button -->
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse my-2 my-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-tabs mr-auto">
+
+                    <!-- Collapse Items -->
+                    <!-- Applications Item -->
+                    <li class="nav-item">
+                        <a class="nav-link text-light" id="home-tab" href="../navbar/applications.html">Applications</a>
+                    </li>
+
+
+                    <!-- Blog Item -->
+                    <li class="nav-item">
+                        <a class="nav-link text-light" id="home-tab" href="../navbar/articles.html">Articles</a>
+                    </li>
+
+
+                    <!-- Useful Links Item -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownUsefullLinks"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Useful Links
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownUsefullLinks">
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://stackoverflow.com/">StackOverflow</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://www.w3schools.com/">W3Schools</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://nodejs.org/en/">Node.js</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://getbootstrap.com/">Bootstrap</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://www.hackerrank.com/">HackerRank</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://www.javascript.com/">JavaScript</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://bestofjs.org/">Best of JavaScript</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="http://bilgisayarkavramlari.sadievrenseker.com/author/admin/">Şadi Evren Şeker</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+
+                <!-- Social Links Icons -->
+                <ul class="navbar-nav">
+
+
+                    <!-- Github Icon  -->
+                    <li class="nav-item dropdown mt-2 mr-5">
+                        <a href="https://github.com/Hakan-unal" target="_blank">
+                            <span class="fa fa-github fa-3x text-light"></span>
+                        </a>
+                    </li>
+
+
+                    <!-- Linkedin Icon  -->
+                    <li class="nav-item dropdown my-2">
+                        <a href="https://www.linkedin.com/in/hakan-unal/" target="_blank">
+                            <span class="fa fa-linkedin fa-3x text-light"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- First Navbar End -->
+
+
+        <!-- Second Navbar Start -->
+        <nav class="navbar navbar-expand">
+
+            <div class="collapse navbar-collapse ml-auto ">
+
+            </div>
+        </nav>
+        <!-- Second Navbar End -->
+
+
+
+        <!--  -->
+
+
+
+
+        <!--Content Container Start-->
+        <div class="container">
+
+
+            <!--H1(Header) section-->
+            <div><a class="text-white" href="../navbar/articles.html"><i
+                        class="far fa-arrow-alt-circle-left fa-2x">Back</i>
+
+                </a>
+
+                <!--Horizontel Line-->
+                <hr class="bg-dark" style="margin-bottom:30px; width: 100%;">
+            </div>
+
+
+
+
+
+
+
+
+
+            <!--Content Row Start-->
+            <div class="row">
+                <div class="card bg-dark text-light border-0">
+                    <div class="card-header border-0 text-center bg-dark">
+                        <i class="fab fa-js fa-9x"></i>
+                    </div>
+                    <div class="card-body border-0">
+                        <div class="card-title text-center h2">Math, Date, String and Number Classes in JavaScript (With
+                            Samples)</div>
+                        <div class="card-text text-muted lead">
+                            <p>
+                                <a href="https://tr.wikipedia.org/wiki/JavaScript" target="_blank"
+                                    style="position: relative;" class="stretched-link">JavaScript</a>
+                                is a programming language specifically designed to make
+                                <a href="https://tr.wikipedia.org/wiki/HTML" target="_blank" style="position: relative;"
+                                    class="stretched-link">HTML</a>
+                                pages more inreractive. <br> By using
+                                <a href="https://tr.wikipedia.org/wiki/JavaScript" target="_blank"
+                                    style="position: relative;" class="stretched-link">JavaScript</a>
+                                you can make your website more interesting and more functional. <br>
+                                In addition, you can develop web, mobile and desktop application
+                                using many different libraries. <br> It is prederred by almost all programmers
+                                because it is easier to learn
+                                <a href="https://tr.wikipedia.org/wiki/JavaScript" target="_blank"
+                                    style="position: relative;" class="stretched-link">JavaScript</a>
+                                and write code than other
+                                languages. <br> For this reason,
+                                <a href="https://tr.wikipedia.org/wiki/JavaScript" target="_blank"
+                                    style="position: relative;" class="stretched-link">JavaScript</a>
+                                is one of the most used programming languages in the world.
+                                Creates the web infrastructure with
+                                <a href="https://tr.wikipedia.org/wiki/HTML" target="_blank" style="position: relative;"
+                                    class="stretched-link">HTML</a>
+                                and
+                                <a href="https://tr.wikipedia.org/wiki/CSS" target="_blank" style="position: relative;"
+                                    class="stretched-link">CSS</a>.<br>
+                                There are 3 classes on
+                                <a href="https://tr.wikipedia.org/wiki/JavaScript" target="_blank"
+                                    style="position: relative;" class="stretched-link">JavaScript</a>.
+                                These are the:
+                                <ul class="my-3">
+                                    <li><a href="#math">Math</a></li>
+                                    <li><a href="#date">Date</a></li>
+                                    <li><a href="#string">String</a></li>
+                                    <li><a href="#number">Number</a></li>
+                                </ul>
+                                Let's begin to explain these classes with samples:
+                            </p>
+                        </div>
+                        <div id="math" class="card-title h3 my-4 text-success">Math</div>
+                        <div class="card-text text-muted lead">
+                            <p>
+                                The class used in mathematical operations in
+                                <a href="https://tr.wikipedia.org/wiki/JavaScript" target="_blank"
+                                    style="position: relative;" class="stretched-link">JavaScript</a>
+                                is Math. Using the methods in the math class, you can easily perform
+                                operations such as square root and absolute value. <br> Below you can
+                                find samples of many methods of the Math class:
+                            </p>
+                        </div>
+                        <div class="card-footer border-0">
+                            <code class="lead">
+
+                        Math.random(); <br>
+                        // Generates random numbers between 0 and 1<br><br>
+
+                        Math.sqrt(4);<br>
+                        // Operation: √4 <br>
+                        // Output: 2 <br><br>
+
+                        Math.pow(4,2); <br>
+                        // Operation: 4<sup>2</sup> <br>
+                        // Output: 16 <br><br>
+
+                        Math.abs(-5); <br>
+                        // Operation: |-5| <br>
+                        // Output: 5 <br><br>
+
+                        Math.min(5,3,1,4,2); <br>
+                        // Operation: Find the smallest value <br>
+                        // Output: 1 <br><br>
+
+                        Math.max(5,3,1,4,2); <br>
+                        // Operation: Find the biggest value <br>
+                        // Output: 5 <br><br>
+
+                        Math.floor(3.7); <br>
+                        // Operation: Rounds the number to the smallest integer<br>
+                        // Output: 3 <br><br>
+
+                        Math.ceiling(3.3); <br>
+                        // Operation: Rounds the number to the biggest integer <br>
+                        // Output: 4 <br><br>
+
+                        Math.round(3.4); <br>
+                        // Operation: Rounds the number to the near integer <br>
+                        // Output: 1 <br><br>
+
+                        Math.sin(x); <br>
+                        // Operation: Returns the sinüs value of the x angle <br><br>
+
+                        Math.cos(x); <br>
+                        // Operation: Returns the cosinüs value of the x angle <br><br>
+
+                        Math.E; <br>
+                        // Operation: Returns Euler's number<br><br>
+
+                        Math.PI(); <br>
+                        // Operation: Returns PI value <br><br>
+
+                        Math.SQRT2 <br>
+                        // Operation: Returns the square root of 2 <br><br>
+
+                        Math.SQRT1_2 <br>
+                        // Operation: Returns the square root of 1/2 <br><br>
+
+                        Math.LN2 <br>
+                        // Operation: Returns the naturel logarithm of 2  <br><br>
+
+                        Math.LN10 <br>
+                        // Operation: Returns the naturel logarithm of 10  <br><br>
+
+                        Math.LOG2E <br>
+                        // Operation: Returns base 2 logarithm of E  <br><br>
+
+                        Math.LOG10E <br>
+                        // Operation: Returns base 10 logarithm of E<br><br>
+                            </code>
+                        </div>
+                        <p>
+                            <a class="btn btn-outline-secondary mt-3" href="https://www.w3schools.com/js/js_math.asp"
+                                target="_blank">For The
+                                Details</a>
+                        </p>
+                        <div id="date" class="card-title h3 text-success my-4">Date</div>
+                        <div class="card-text lead text-muted">
+                            <p>
+                                The Date class is used to handle date and time. It is quite
+                                difficult to do date operations directly in
+                                <a href="https://tr.wikipedia.org/wiki/JavaScript" target="_blank"
+                                    style="position: relative;" class="stretched-link">JavaScript</a>.
+                                So, you may need to write very complex codes. For this reason, many
+                                libraries have been developed for date and time operations.
+                                Some of these libraries are as follows:
+                                <ul>
+                                    <li><a href="https://momentjs.com/" target="_blank">Moment.js</a></li>
+                                    <li><a href="https://datejs.com/" target="_blank">Date.js</a></li>
+                                    <li><a href="https://arshaw.com/xdate/" target="_blank">XDate.js</a></li>
+                                </ul>
+                                <p>Below you can find samples of many methods of the Date class:</p>
+
+                                <div class="card-footer border-0">
+                                    <code class="lead">
+
+                                getTime(); <br>
+                                // Operation: Returns the time elapsed since January 1, 1970 (miliseconds) <br><br>
+
+                                getDate(); <br>
+                                // Operation: Returns the day of the month (1-31) <br><br>
+
+                                getDay(); <br>
+                                // Operation: Returns the day of the week.0 and 7 are considered Sunday <br><br>
+
+                                getMonth(); <br>
+                                // Operation: Returns the month of the year (0-11) <br><br>
+
+                                getHours(); <br>
+                                // Operation: Returns the hour of day (0-23) <br><br>
+
+                                getMinutes(); <br>
+                                // Operation: Returns the minute of hour (0-59) <br><br>
+
+                                getSeconds(); <br>
+                                // Operation: Returns the second of date (0-59) <br><br>
+
+                                setDate(); <br>
+                                // Operation: Sets the day of the month (1-31)<br><br>
+
+                                setMonth(); <br>
+                                // Operation: Sets the month of the year (0-11) <br><br>
+
+                                setFullYear(); <br>
+                                // Operation: Sets the year of the date <br><br>
+
+                                setHours(); <br>
+                                // Operation: Sets the hour of the date (0-23) <br><br>
+                                    </code>
+                                </div>
+                                <p>
+                                    <a class="btn btn-outline-secondary mt-3"
+                                        href="https://www.w3schools.com/js/js_dates.asp" target="_blank">For The
+                                        Details</a>
+                                </p>
+                                <div id="string" class="card-title h3 text-success my-4">String</div>
+                                <div class="card-text lead border-0">
+                                    <p>
+                                        We don't need any classes to use the String class properties.
+                                        We can apply it directly to any object whose data type is string. <br>
+                                        Below you can find samples of many methods of the Date class:
+                                    </p>
+                                </div>
+                                <div class="card-footer-border-0">
+                                    <code class="lead">
+
+                                let sentence = " AbCd aBcD "; <br><br>
+                                
+                                sentence.toUpperCase(); <br>
+                                Output: " ABCD ABCD " <br><br>
+
+                                sentence.toLowerCase(); <br>
+                                Output: " abcd abcd " <br><br>
+
+                                sentence.length; <br>
+                                Output: 11 <br><br>
+
+                                sentence.trim(); <br>
+                                Output: "AbCd aBcD" <br><br>
+
+                                sentence.bold(); <br>
+                                Operation: Thickens the text <br><br>
+
+                                sentence.italic() <br>
+                                Operation: Makes the text italic <br><br>
+
+                                sentence.indexOf("aB") <br>
+                                Output: 6 <br><br>
+
+                                sentence.search("Cd") <br>
+                                Output: 3 <br><br>
+
+                                sentence.concat("" , "text"); <br>
+                                Output: " AbCd aBcD text"  <br><br>
+
+                                sentence.replace("AbCd" , "new text"); <br>
+                                Output: " new text aBcD "  <br><br>
+                                    </code>
+                                </div>
+                                <p>
+                                    <a class="btn btn-outline-secondary mt-3"
+                                        href="https://www.w3schools.com/js/js_string_methods.asp" target="_blank">For The
+                                        Details</a>
+                                </p>
+                            </p>
+                        </div>
+                        <div id="number" class="card-title text-success h3 my-4">Number</div>
+                        <div class="card-text lead border-0 text-muted">
+                            <p>
+                                Number properties and methods; provides some operations about numerical values <br>
+                                You can find common properties and methods of numerical values ​​below:
+                            </p>
+                        </div>
+                        <div class="card-footer border-0">
+                            <code class="lead">
+                        
+                                Number("123"); <br>
+                                // Output: 123 <br><br>
+
+                                parseFloat("1.123"); <br>
+                                // Output: 1.234 <br><br>
+
+                                toExponential(1.234); <br>
+                                // Operation: Converts to exponential number <br><br>
+
+                                const value = 1.2345; <br><br>
+                                value.toFixed(0); <br>
+                                // Output: 1 <br><br>
+
+                                value.toFixed(2); <br>
+                                // Output: 1.23 <br><br>
+
+                                value.toPrecision(2); <br>
+                                // Output: 1.2 <br><br> 
+
+                                value.toPrecision(3); <br>
+                                // Output: 1.23 <br><br> 
+                            </code>
+                        </div>
+                        <p>
+                            <a class="btn btn-outline-secondary mt-3"
+                                href="https://www.w3schools.com/js/js_number_methods.asp" target="_blank">For The
+                                Details</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!--Content Row End-->
+
+
+
+
+
+
+
+
+
+            <!--Horizontel Line-->
+            <hr class="w-100 bg-light" style="margin-top: 100px;">
+
+            <!--Footer section-->
+            <div class="badge badge-pill badge-light">&copy; 2020. All rights reserved.</div>
+
+
+        </div>
+        <!--Content Container End-->
+
+
+    </div>
+    <!--Covering everything Container End-->
+
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
