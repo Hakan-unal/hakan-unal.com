@@ -49,12 +49,12 @@ class ToDoList {
                 div.setAttribute("class", "card col-sm-6 col-md-4 col-lg-3");
                 div.innerHTML = `
                     <div class="card-body">
-                            <div class="card-title text-uppercase">Name:${element.workName}</div>
+                            <div class="card-title text-uppercase"><b>Name:</b> ${element.workName}</div>
                             <hr>
-                            <div class="card-text">Description: ${element.textArea}</div>
+                            <div class="card-text"><b>Description:</b> ${element.textArea}</div>
                             <ul class="list-group mt-3">
-                                <li class="list-group-item">Start Date:${element.startDate}</li>
-                                <li class="list-group-item">Due Date:${element.finishDate}</li>
+                                <li class="list-group-item"><b>Start Date:</b> ${element.startDate}</li>
+                                <li class="list-group-item"><b>Due Date:</b> ${element.finishDate}</li>
                             </ul>
                             <div class="card-footer">
                                 <a id="${element.id}" type="button" class="btn btn-outline-dark btn-lg btn-block" name="delete">Delete</a>

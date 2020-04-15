@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Using the File System Module in Node.js (With Samples)" />
+    <meta name="keywords"
+        content="HTML,CSS,JavaScript,Bootstrap,Node.js,Express.js.Hakan Ünal,Software,Node.js Article,Full Stack,Front End,Back End,Web,Developer,Computer Engineer Student,Using the File System Module in Node.js,How to Use file module in Node.js ?,Node.js Modules,File module,Path module">
+    <meta name="author" content="Hakan Ünal">
+
+    <!--Preview image-->
+    <link rel="image_src" href="../../img/preview.jpeg"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Font Awesome Script -->
+    <script src="https://kit.fontawesome.com/02fca21eb9.js" crossorigin="anonymous"></script>
+
+    <title>Hakan ÜNAL</title>
+
+
+
+    <style>
+        /* Set the border color */
+
+        .custom-toggler.navbar-toggler {
+            border-color: white;
+        }
+
+        /* Setting the stroke to green using rgb values (0, 128, 0) */
+
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+    </style>
+
+
+
+</head>
+
+<body class="bg-dark">
+
+    <!--Covering everything Container Start-->
+    <div class="container">
+
+
+        <!-- First Navbar Start -->
+        <nav class="navbar navbar-expand-lg">
+
+
+            <!-- Navbar Home Icon -->
+            <a class="navbar-brand text-light" href="../../index.html">
+
+                <svg class="bi bi-house-door" width="3em" height="3em" viewBox="0 0 15 15" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M7.646 1.146a.5.5 0 01.708 0l6 6a.5.5 0 01.146.354v7a.5.5 0 01-.5.5H9.5a.5.5 0 01-.5-.5v-4H7v4a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-7a.5.5 0 01.146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 01.5-.5h3a.5.5 0 01.5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"
+                        clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5z"
+                        clip-rule="evenodd" />
+                </svg>
+            </a>
+
+
+            <!-- Toogler  Button -->
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse my-2 my-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-tabs mr-auto">
+
+                    <!-- Collapse Items -->
+                    <!-- Applications Item -->
+                    <li class="nav-item">
+                        <a class="nav-link text-light" id="home-tab" href="../navbar/applications.html">Applications</a>
+                    </li>
+
+
+                    <!-- Blog Item -->
+                    <li class="nav-item">
+                        <a class="nav-link text-light" id="home-tab" href="../navbar/articles.html">Articles</a>
+                    </li>
+
+
+                    <!-- Useful Links Item -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownUsefullLinks"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Useful Links
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownUsefullLinks">
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://stackoverflow.com/">StackOverflow</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://www.w3schools.com/">W3Schools</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://nodejs.org/en/">Node.js</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://getbootstrap.com/">Bootstrap</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://www.hackerrank.com/">HackerRank</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://www.javascript.com/">JavaScript</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="https://bestofjs.org/">Best of JavaScript</a>
+                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                                href="http://bilgisayarkavramlari.sadievrenseker.com/author/admin/">Şadi Evren Şeker</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+
+                <!-- Social Links Icons -->
+                <ul class="navbar-nav">
+
+
+                    <!-- Github Icon  -->
+                    <li class="nav-item dropdown mt-2 mr-5">
+                        <a href="https://github.com/Hakan-unal" target="_blank">
+                            <span class="fa fa-github fa-3x text-light"></span>
+                        </a>
+                    </li>
+
+
+                    <!-- Linkedin Icon  -->
+                    <li class="nav-item dropdown my-2">
+                        <a href="https://www.linkedin.com/in/hakan-unal/" target="_blank">
+                            <span class="fa fa-linkedin fa-3x text-light"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- First Navbar End -->
+
+
+        <!-- Second Navbar Start -->
+        <nav class="navbar navbar-expand">
+
+            <div class="collapse navbar-collapse ml-auto ">
+
+            </div>
+        </nav>
+        <!-- Second Navbar End -->
+
+
+
+        <!--  -->
+
+
+
+
+        <!--Content Container Start-->
+        <div class="container">
+
+
+            <!--H1(Header) section-->
+            <div><a class="text-white" href="../navbar/articles.html"><i
+                        class="far fa-arrow-alt-circle-left fa-2x">Back</i>
+
+                </a>
+
+                <!--Horizontel Line-->
+                <hr class="bg-dark" style="margin-bottom:30px; width: 100%;">
+            </div>
+
+
+            <!--Content Row Start-->
+            <div class="row">
+
+                <div class="card bg-dark text-light border-0">
+                    <div class="card-header border-0 text-center">
+                        <i class="fab fa-node fa-5x"></i>
+                    </div>
+
+
+                    <!--Content Start-->
+                    <div class="card-body border-0">
+                        <div class="card-title text-center h3">Using the File System Module in Node.js (With Samples)
+                        </div>
+
+
+
+                        <!---->
+                        <!--Using the File System Module in Node.js (With Samples)-->
+                        <!---->
+
+
+                        <div class="card-text border-0 lead text-muted">
+                            <div class="row">
+                                <div class="col-lg-6"> <img class="w-100"
+                                        src="https://cdn.dribbble.com/users/505482/screenshots/1776789/nodejs-dribbble_1.gif"
+                                        alt="Node.js gif">
+                                </div>
+                                <div class="col-lg-6"><p>
+                                    File system related operations of
+                                    <a href="https://nodejs.org/en/" target="_blank" style="position: relative;"
+                                        class="stretched-link">Node.js</a>
+                                    platform are done through fs module.
+                                    <a href="https://nodejs.org/en/" target="_blank" style="position: relative;"
+                                        class="stretched-link">Node.js</a>
+                                    works
+                                    asynchronously the fs module works asynchronously accordingly but almost all functions
+                                    have synchronous versions.
+                                    <p>
+                                        Using the fs module, we can implement following operations:
+                                        <ul>
+                                            <li><a href="#openingFile">Opening File</a></li>
+                                            <li><a href="#writingFile">Writing File</a></li>
+                                            <li><a href="#readingFile">Reading File</a></li>
+                                            <li><a href="#removingFile">Removing File</a></li>
+                                        </ul>
+                                    </p>
+                                </p></div>
+                            </div>
+                            
+
+
+
+                            <!---->
+                            <!--Opening File-->
+                            <!---->
+
+
+                            <div class="card-text border-0 lead text-muted">
+                                <div id="openingFile" class="h3 text-success mt-5 mb-3">Opening File</div>
+                                <p>
+                                    <code>fs.open()</code>
+                                    method is used to open files asynchronously and
+                                    <code>fs.openSync()</code>
+                                    method is used to open files synchronously on your computer. 
+                                    <code>fs.open()</code> has at least 3 parameters: <br><br>
+                                    1. Parameter : File path <br>
+                                    2. Parameter : Flag <br>
+                                    3. Parameter : calback function <br><br>
+                                    Let's continue with code sample below but first, let's create the
+                                    <mark>test.txt</mark> in the directory where the <a
+                                        href="https://www.javascript.com/" target="_blank" style="position: relative;"
+                                        class="stretched-link">JavaScript</a> file is path
+                                </p>
+                            </div>
+
+
+                            <div class="card-footer border-0">
+                                <code class="lead">
+                                    // Included the fs module to file <br>
+                                    const fs = require("fs");<br><br>
+                                    fs.open("test.txt" , "r+" , (err,fd) => {<br><br>
+    
+                                        if(err){<br>
+                                            console.log(err); <br>
+    
+                                        } <br><br>
+    
+                                        else{<br>
+                                            console.log("File successfully opened");<br>
+                                        }  <br><br>
+                                    });
+                                </code>
+                            </div>
+                            <div class="card-text border-0 lead text-muted">
+                                <p>There is an important point I would like to mention here.
+                                    You can see what the flags are doing on the table below:</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <ul class="list-group">
+                                            <li class="list-group-item bg-dark "><kbd>r</kbd> Open for reading. An
+                                                exception
+                                                occurs if the file does not exist.</li>
+                                            <li class="list-group-item bg-dark "><kbd>r+</kbd> Open for reading and
+                                                writing.
+                                                An exception occurs if the file does not exist.</li>
+                                            <li class="list-group-item bg-dark "><kbd>rs</kbd> Open for reading in
+                                                synchronous mode, which instructs the operating system to bypass the
+                                                system
+                                                cache. This is mostly used for opening files on NFS mounts; it does not
+                                                make
+                                                <code>open()</code> a synchronous method.</li>
+                                            <li class="list-group-item bg-dark "><kbd>rs+</kbd> Open for reading and
+                                                writing
+                                                in synchronous mode.</li>
+                                            <li class="list-group-item bg-dark "><kbd>w</kbd> Open for writing. If the
+                                                file
+                                                does not exist, it is created. If the file already exists, it is
+                                                truncated.
+                                            </li>
+                                            <li class="list-group-item bg-dark "><kbd>wx</kbd> Similar to the
+                                                <kbd>w</kbd> flag,
+                                                but
+                                                the file is opened in exclusive mode. Exclusive mode ensures that the
+                                                files
+                                                are newly created.</li>
+                                            <li class="list-group-item bg-dark "><kbd>w+</kbd> Open for reading and
+                                                writing.
+                                                If the file does not exist, it is created. If the file already exists,
+                                                it is
+                                                truncated.</li>
+                                            <li class="list-group-item bg-dark "><kbd>wx+</kbd> Similar to the
+                                                <kbd>w+</kbd> flag,
+                                                but
+                                                the file is opened in exclusive mode.</li>
+                                            <li class="list-group-item bg-dark "><kbd>a</kbd> Open for appending. If the
+                                                file does not exist, it is created.</li>
+                                            <li class="list-group-item bg-dark "><kbd>ax</kbd> Similar to the
+                                                <kbd>a</kbd> flag,
+                                                but
+                                                the file is opened in exclusive mode.</li>
+                                            <li class="list-group-item bg-dark "><kbd>a+</kbd> Open for reading and
+                                                appending. If the file does not exist, it is created.</li>
+                                            <li class="list-group-item bg-dark "><kbd>ax+</kbd> Similar to the
+                                                <kbd>a+</kbd>
+                                                flag,but the file is opened in exclusive mode.</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <p>
+                                    <a class="btn btn-outline-secondary mt-3"
+                                        href="https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback"
+                                        target="_blank">For The Details</a></p>
+                            </div>
+
+
+
+
+                            <!---->
+                            <!--Writing File-->
+                            <!---->
+
+
+                            <div id="writingFile" class="h3 text-success mt-5 mb-3">Writing File</div>
+
+                            <p class="lead">
+                                <code>fs.writeFile()</code> method is used to write files asynchronously and
+                                <code>fs.readFileSync()</code> method is used to write files synchronously on your
+                                computer.
+                                <code> fs.writeFile()</code> function has at least 3 parameters: <br><br>
+                                1. Parameter : File path <br>
+                                2. Parameter : Data to be written into the file <br>
+                                3. Parameter : callback function <br>
+                                Optional Parameter : Encoding type <br><br>
+                                Let's start by doing an sample together
+                            </p>
+
+                            <div class="card-footer border-0 lead">
+
+                                <p>
+                                    <code class="lead">
+                                // Included the fs module to file <br>
+                                const fs = require("fs");<br><br>
+                                // Data to be written into the file <br>
+                                const data = "My First Sentence";<br><br>
+                                fs.writeFile("myFirstText.txt" + data + (err) => {<br>
+                                if(err){ <br>
+                                    console.log(err); <br>
+                                } <br><br>
+                                else{ <br>
+                                    console.log("Succesful operation!"); <br>
+                                } <br> <br>
+
+                                });
+                                </code>
+                                </p>
+
+
+                            </div>
+                            <p>It should definitely not be forgotten. If the file path is to be written, it should be
+                                written starting from the root directory. If you use the path module for this, it is
+                                easier.</p>
+                            <a class="btn btn-outline-secondary mt-3"
+                                href="https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback"
+                                target="_blank">For The Details</a>
+
+
+
+                            <!---->
+                            <!--Reading File-->
+                            <!---->
+
+
+                            <div id="readingFile" class="h3 text-success mt-5 mb-3">Reading File</div>
+
+                            <p>
+                                <code> fs.readFile()</code>
+                                method is used to read files asynchronously and
+                                <code> fs.readFileSync()</code>
+                                method is used to read files synchronously on your computer. <code>fs.readFile()</code> function has at least 2 parameters: <br><br>
+                                1. Parameter : File path <br>
+                                2. Parameter : callback function <br>
+                                Optional Parameter : Encoding type <br><br>
+                                Let's start fast together
+                                and create the file named <mark>fs_first_try.txt</mark> file and get the content as
+                                follows:
+                            </p>
+                            <p><i class="text-warning">"Hello World, Welcome to Node.js"</i></p>
+                            <p>However, let's create <mark>fs_first_try.js</mark> file and get the content as follows:
+                            </p>
+                        </div>
+
+                        <div class="card-footer border-0">
+                            <code class="lead">
+                                // Included the fs module to file <br>
+                                const fs = require("fs");<br><br>
+                                
+                                fs.readFile("fs_first_try.txt" , (err,data) => {<br><br>
+                                    
+                                    if(err){<br>
+                                        console.log(err);<br>}<br><br>
+                                    else{<br>
+                                        console.log(data.toString());<br>
+                                    }<br><br>
+                                });
+                            
+                            </code>
+                        </div>
+                        <div class="card-text border-0 lead text-muted">
+                            <p>Congratulations! You performed the first successful operation with the fs module.
+                                When the above block of code runs, you will see the <i class="text-warning">"Hello
+                                    World, Welcome to
+                                    Node.js"</i> output in the consol</p>
+                            <p>
+                                <a class="btn btn-outline-secondary mt-3"
+                                    href="https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback"
+                                    target="_blank">For The Details</a> </p>
+                        </div>
+
+
+
+                        <!---->
+                        <!--Removing File-->
+                        <!---->
+
+
+                        <div id="removingFile" class="card-text border-0 lead text-muted">
+                            <div class="h3 text-success mt-5 mb-3">Removing File</div>
+                            <p>
+                                <code> fs.unlink()</code>
+                                method is used to remove file asynchronously and
+                                <code> fs.unlinkSync()</code>
+                                method is used to remove file synchronously on your computer.
+                                <code>fs.unlink()</code> function has at least 2 parameter: <br><br>
+                                1. Parameter : File path <br>
+                                2. Parameter : callback function <br><br>
+                                These functions take the file path as a parameter. However,
+                                the asynchronous version also takes a callback function as
+                                a parameter. It should definitely not be forgotten. If the
+                                file path is to be written, it should be written starting
+                                from the root directory. If you use the path module for
+                                this, it is easier.Let's continue with code sample below:
+                            </p>
+                        </div>
+
+                        <div class="card-footer border-0 lead">
+                            <p>
+                                <code>
+                                // Included the fs and path module to file <br>
+                                const fs = require("fs"); <br>
+                                const path = require("path"); <br><br>
+                                // We got the path of the file starting in the root directory <br>
+                                filePath = __dirname + path.sep + "myFile.txt"; <br> <br>
+                                fs.unlink(filePath, (err) => { <br> <br>
+                                    if(err){ <br>
+                                        console.log(err); <br>
+                                    } <br> <br>
+                                    else{ <br>
+                                    console.log("File deleting succesful"); <br>
+                                    } <br><br>
+
+                                });
+                            </code>
+                            </p>
+
+                        </div>
+                        <p>
+                            <a class="btn btn-outline-secondary mt-3"
+                                href="https://nodejs.org/api/fs.html#fs_fs_unlink_path_callback" target="_blank">For The
+                                Details</a> </p>
+
+                    </div>
+                    <!--Content End-->
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <!--Content Row End-->
+
+
+        <!--Horizontel Line-->
+        <hr class="w-100 bg-light" style="margin-top: 100px;">
+
+        <!--Footer section-->
+        <div class="badge badge-pill badge-light">&copy; 2020. All rights reserved.</div>
+
+
+    </div>
+    <!--Content Container End-->
+
+
+    </div>
+    <!--Covering everything Container End-->
+
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
