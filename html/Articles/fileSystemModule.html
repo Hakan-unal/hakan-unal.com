@@ -11,14 +11,14 @@
     <meta name="author" content="Hakan Ünal">
 
     <!--Preview image-->
-    <link rel="image_src" href="../../img/preview.jpeg"/>
+    <link rel="image_src" href="../../img/preview.jpeg" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Font Awesome Script -->
-    <script src="https://kit.fontawesome.com/02fca21eb9.js" crossorigin="anonymous"></script>
+    <script rel="noreferrer" src="https://kit.fontawesome.com/02fca21eb9.js" crossorigin="anonymous"></script>
 
     <title>Hakan ÜNAL</title>
 
@@ -97,21 +97,21 @@
                             Useful Links
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownUsefullLinks">
-                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                            <a class="dropdown-item text-dark bg-light" rel="noreferrer" target="_blank"
                                 href="https://stackoverflow.com/">StackOverflow</a>
-                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                            <a class="dropdown-item text-dark bg-light" rel="noreferrer" target="_blank"
                                 href="https://www.w3schools.com/">W3Schools</a>
-                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                            <a class="dropdown-item text-dark bg-light" rel="noreferrer" target="_blank"
                                 href="https://nodejs.org/en/">Node.js</a>
-                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                            <a class="dropdown-item text-dark bg-light" rel="noreferrer" target="_blank"
                                 href="https://getbootstrap.com/">Bootstrap</a>
-                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                            <a class="dropdown-item text-dark bg-light" rel="noreferrer" target="_blank"
                                 href="https://www.hackerrank.com/">HackerRank</a>
-                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                            <a class="dropdown-item text-dark bg-light" rel="noreferrer" target="_blank"
                                 href="https://www.javascript.com/">JavaScript</a>
-                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                            <a class="dropdown-item text-dark bg-light" rel="noreferrer" target="_blank"
                                 href="https://bestofjs.org/">Best of JavaScript</a>
-                            <a class="dropdown-item text-dark bg-light" target="_blank"
+                            <a class="dropdown-item text-dark bg-light" rel="noreferrer" target="_blank"
                                 href="http://bilgisayarkavramlari.sadievrenseker.com/author/admin/">Şadi Evren Şeker</a>
                         </div>
                     </li>
@@ -125,7 +125,7 @@
 
                     <!-- Github Icon  -->
                     <li class="nav-item dropdown mt-2 mr-5">
-                        <a href="https://github.com/Hakan-unal" target="_blank">
+                        <a href="https://github.com/Hakan-unal" target="_blank" rel="noreferrer">
                             <span class="fa fa-github fa-3x text-light"></span>
                         </a>
                     </li>
@@ -133,7 +133,7 @@
 
                     <!-- Linkedin Icon  -->
                     <li class="nav-item dropdown my-2">
-                        <a href="https://www.linkedin.com/in/hakan-unal/" target="_blank">
+                        <a href="https://www.linkedin.com/in/hakan-unal/" target="_blank" rel="noreferrer">
                             <span class="fa fa-linkedin fa-3x text-light"></span>
                         </a>
                     </li>
@@ -201,28 +201,31 @@
                                         src="https://cdn.dribbble.com/users/505482/screenshots/1776789/nodejs-dribbble_1.gif"
                                         alt="Node.js gif">
                                 </div>
-                                <div class="col-lg-6"><p>
-                                    File system related operations of
-                                    <a href="https://nodejs.org/en/" target="_blank" style="position: relative;"
-                                        class="stretched-link">Node.js</a>
-                                    platform are done through fs module.
-                                    <a href="https://nodejs.org/en/" target="_blank" style="position: relative;"
-                                        class="stretched-link">Node.js</a>
-                                    works
-                                    asynchronously the fs module works asynchronously accordingly but almost all functions
-                                    have synchronous versions.
+                                <div class="col-lg-6">
                                     <p>
-                                        Using the fs module, we can implement following operations:
-                                        <ul>
-                                            <li><a href="#openingFile">Opening File</a></li>
-                                            <li><a href="#writingFile">Writing File</a></li>
-                                            <li><a href="#readingFile">Reading File</a></li>
-                                            <li><a href="#removingFile">Removing File</a></li>
-                                        </ul>
+                                        File system related operations of
+                                        <a rel="noreferrer" href="https://nodejs.org/en/" target="_blank"
+                                            style="position: relative;" class="stretched-link">Node.js</a>
+                                        platform are done through fs module.
+                                        <a rel="noreferrer" href="https://nodejs.org/en/" target="_blank"
+                                            style="position: relative;" class="stretched-link">Node.js</a>
+                                        works
+                                        asynchronously the fs module works asynchronously accordingly but almost all
+                                        functions
+                                        have synchronous versions.
+                                        <p>
+                                            Using the fs module, we can implement following operations:
+                                            <ul>
+                                                <li><a href="#openingFile">Opening File</a></li>
+                                                <li><a href="#writingFile">Writing File</a></li>
+                                                <li><a href="#readingFile">Reading File</a></li>
+                                                <li><a href="#removingFile">Removing File</a></li>
+                                            </ul>
+                                        </p>
                                     </p>
-                                </p></div>
+                                </div>
                             </div>
-                            
+
 
 
 
@@ -237,13 +240,13 @@
                                     <code>fs.open()</code>
                                     method is used to open files asynchronously and
                                     <code>fs.openSync()</code>
-                                    method is used to open files synchronously on your computer. 
+                                    method is used to open files synchronously on your computer.
                                     <code>fs.open()</code> has at least 3 parameters: <br><br>
                                     1. Parameter : File path <br>
                                     2. Parameter : Flag <br>
                                     3. Parameter : calback function <br><br>
                                     Let's continue with code sample below but first, let's create the
-                                    <mark>test.txt</mark> in the directory where the <a
+                                    <mark>test.txt</mark> in the directory where the <a rel="noreferrer"
                                         href="https://www.javascript.com/" target="_blank" style="position: relative;"
                                         class="stretched-link">JavaScript</a> file is path
                                 </p>
@@ -326,7 +329,7 @@
                                 <p>
                                     <a class="btn btn-outline-secondary mt-3"
                                         href="https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback"
-                                        target="_blank">For The Details</a></p>
+                                        rel="noreferrer" target="_blank">For The Details</a></p>
                             </div>
 
 
@@ -378,7 +381,7 @@
                                 easier.</p>
                             <a class="btn btn-outline-secondary mt-3"
                                 href="https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback"
-                                target="_blank">For The Details</a>
+                                rel="noreferrer" target="_blank">For The Details</a>
 
 
 
@@ -393,7 +396,8 @@
                                 <code> fs.readFile()</code>
                                 method is used to read files asynchronously and
                                 <code> fs.readFileSync()</code>
-                                method is used to read files synchronously on your computer. <code>fs.readFile()</code> function has at least 2 parameters: <br><br>
+                                method is used to read files synchronously on your computer. <code>fs.readFile()</code>
+                                function has at least 2 parameters: <br><br>
                                 1. Parameter : File path <br>
                                 2. Parameter : callback function <br>
                                 Optional Parameter : Encoding type <br><br>
@@ -430,7 +434,7 @@
                             <p>
                                 <a class="btn btn-outline-secondary mt-3"
                                     href="https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback"
-                                    target="_blank">For The Details</a> </p>
+                                    rel="noreferrer" target="_blank">For The Details</a> </p>
                         </div>
 
 
@@ -482,7 +486,8 @@
                         </div>
                         <p>
                             <a class="btn btn-outline-secondary mt-3"
-                                href="https://nodejs.org/api/fs.html#fs_fs_unlink_path_callback" target="_blank">For The
+                                href="https://nodejs.org/api/fs.html#fs_fs_unlink_path_callback" rel="noreferrer"
+                                target="_blank">For The
                                 Details</a> </p>
 
                     </div>
