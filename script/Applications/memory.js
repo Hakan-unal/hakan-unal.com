@@ -67,7 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 1; i <= cardArray.length; i++) {
             var img = document.createElement('img');
             img.setAttribute('src', '../../img/applications/memory/blank.png');
-            img.setAttribute("style","height:80%")
+            img.setAttribute("style","height:125px")
+            img.setAttribute("class","w-100")
             img.setAttribute('data-id', i-1);
             img.addEventListener('click', flipCard);
             let box = document.querySelector(`#box${i}`);
