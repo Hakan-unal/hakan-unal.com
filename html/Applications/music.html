@@ -45,35 +45,50 @@
 <body style="background-color: rgba(222, 221, 135, 0.63);">
 
 
+    <div class="row">
 
-    <div class="d-flex justify-content-center mt-5">
-        <div class="">
+        <div class="col-6  mt-5">
+
             <div class="d-flex justify-content-center">
-                <i id="icon" class="fab fa-napster fa-6x"></i>
-            </div>
-            <span class="mx-4">
-                <i id="backwardIcon" class="fas fa-backward fa-3x"></i>
-            </span>
-            <span class="mx-4">
-                <i id="playpauseIcon" class="far fa-play-circle fa-3x"></i>
-            </span>
-            <span class="mx-4">
-                <i id="forwardIcon" class="fas fa-forward fa-3x"></i>
-            </span>
+                <div class="">
+                    <div class="d-flex justify-content-center">
+                        <i id="icon" class="fab fa-napster fa-6x"></i>
+                    </div>
+                    <span class="mx-4">
+                        <i id="backwardIcon" class="fas fa-backward fa-3x"></i>
+                    </span>
+                    <span class="mx-4">
+                        <i id="playpauseIcon" class="far fa-play-circle fa-3x"></i>
+                    </span>
+                    <span class="mx-4">
+                        <i id="forwardIcon" class="fas fa-forward fa-3x"></i>
+                    </span>
 
 
-            <audio id="audio" controls style="width: 0px;">
-                <source src="../../audio/cennet.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
+                    <audio id="audio" controls style="width: 0px;">
+                        <source id="musicSource" src="music/cennet.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
 
 
-            <div class="progress">
-                <div id="progresBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="background-color: black;"></div>
+                    <div class="progress">
+                        <div id="progresBar" class="progress-bar progress-bar-striped progress-bar-animated"
+                            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                            style="background-color: black;"></div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
+        <div class="col-5  mt-5">
+            <div class="list-group">
+                <a id="musicListButton1" href="" class="list-group-item list-group-item-action list-group-item-warning">Cennetten Çiçek</a>
+                <a id="musicListButton2" href="" class="list-group-item list-group-item-action list-group-item-warning">Summer</a>
+                <a id="musicListButton3" href="" class="list-group-item list-group-item-action list-group-item-warning">Ukulele</a>
+              </div>
+        </div>
 
     </div>
 
@@ -93,9 +108,15 @@
 
     <!-- jQuery -->
     <script src="../jQuery/jquery-3.5.1.min"></script>
+    <script>
+        $("#playpauseIcon").click(() => {
+            console.log("Merhaba");
+        })
+
+    </script>
 
     <!-- Optional JavaScript -->
-    <script type="text/javaScript" src="../../script/Applications/music.js"></script>
+    <script type="text/javaScript" src="/script/Applications/music.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -108,5 +129,4 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
